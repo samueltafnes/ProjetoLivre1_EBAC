@@ -182,7 +182,7 @@ header .container{
     }
 }
 
-@media screen and (min-width: 980px){
+@media screen and (min-width: 981px){
     .box{
         display: flex;
         margin: 32px 0;
@@ -320,7 +320,6 @@ header .container{
         flex-direction: column;
         max-height: max-content; 
         padding-bottom: 15px; 
-        border: 1px solid pink;
     }
 
     .tittle_imagecap span{
@@ -333,7 +332,7 @@ header .container{
         margin: 15px auto;
     }
 }
-@media  screen and (min-width: 620px) {
+@media  screen and (min-width: 621px) {
     .container_purchase{
         max-width: 900px;
         margin: 32px auto;
