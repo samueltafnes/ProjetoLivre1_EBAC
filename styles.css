@@ -1,0 +1,568 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+p{
+    font-size: 20px;
+}
+h2{
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #e9e9e9;;
+}
+h3{
+    font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #e9e9e9;;
+}
+
+body{
+    background-color: #3c4043;
+}
+span{
+    height: 32px;
+    background-color: #9c7b3d;
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    padding: 4px;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+
+/* SECTION MAIN */
+#main{
+    background-image: url(./imagens/large_1.webp);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 1080px;
+}
+
+header{
+    background-color: #3c4043;
+    box-shadow: 0 2px 32px rgba(61, 61, 61, 0.425);
+    padding: 16px 0;
+}
+header img{
+    height: 42px;
+}
+
+header nav li{
+    display: inline;
+    padding: 16px 8px;
+}
+header nav li > a{
+    font-family: "Roboto", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #e9e9e9;;
+}
+header nav li > a:hover{
+    color: #d99e30;
+    text-decoration: underline;
+}
+header .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.announcement_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 440px;
+    max-height: 480px;
+    background-color: #0202029a;
+    text-align: center;
+    padding: 20px 15px;
+    position: relative;
+    left: 100%;
+    top: 50%;
+    translate: -100% 50%;
+}
+.announcement_card h2, .announcement_card h3, .announcement_card a{
+    margin-top: 20px;
+}
+
+.announcement_card nav{
+    margin-top: 30px;
+
+}
+.announcement_card nav li{
+    display: inline;
+    padding: 2px;
+}
+
+.announcement_card img{
+    height: 38px;
+    padding: 4px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+}
+
+.announcement_card a{
+    height: 32px;
+    padding: 4px 8px;
+    margin: 20px 0;
+    background-color: #00e660;
+    color: #3c4043;
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    align-content: center;
+    text-align: center;
+    width: 170px;
+    transition: all .1s ease-in-out;
+}
+.announcement_card a:hover{
+    background-color: #13ff75;
+    text-decoration: underline;
+}
+
+
+/* SECTION ARCHIVEMENTS */
+#archivements .container{
+    background-color:#3c4043;
+    max-width: 960px;
+    padding: 32px 24px;
+    text-align: center;
+}
+#archivements p{
+    font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-weight: lighter;
+    color:#e9e9e9;
+    margin: 16px 0;
+}
+#archivements img{
+    height: 86px;
+    margin-top: 32px;
+}
+
+/* SECTION FEATURES_GAME */
+@media screen and (max-width: 980px){
+    .box{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 32px;
+    }
+    .features{
+        padding: 24px;
+        background-color: #9c7b3d;
+        color: #e9e9e9;
+        text-align: center;
+        align-content: center;
+        width: 100%;
+    }
+    .art_image{
+        width: 100%;
+        object-fit: contain;
+        box-sizing: content-box;
+    }
+}
+@media screen and (max-width: 980px){
+    .reverse{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 980px){
+    .box{
+        display: flex;
+        margin: 32px 0;
+    }
+    .features{
+        padding: 18px;
+        background-color: #9c7b3d;
+        color: #e9e9e9;
+        text-align: center;
+        align-content: center;
+        width: 35%;
+        min-width: 300px;
+    }
+    .art_image{
+        height: 100%;
+        min-width: 634px;
+        width: 65%;
+        object-fit: contain;
+        box-sizing: content-box;
+    }
+}
+
+/* SECTION GALLERY */
+#gallery .container{
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 32px;
+}
+#gallery .container h2{
+    padding: 32px 0;
+}
+
+.navigation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.bar img{
+    height: 58px;
+    margin: 4px;
+}
+.bar img:hover{
+    outline: 2px solid #d99e30;
+}
+
+.spin_gallery{
+    display: flex;
+    width: 1000%;
+    height: 100%;
+}
+.spin_gallery input{
+    display: none;
+}
+.show_image{
+    width: 10%;
+    transition: .4s;
+}
+.show_image img{
+    width: 100%;
+    height: 100%;
+}
+
+#img_1:checked ~ .s1{
+    margin-left: 0;
+}
+#img_2:checked ~ .s1{
+    margin-left: -10%;
+}
+#img_3:checked ~ .s1{
+    margin-left: -20%;
+}
+#img_4:checked ~ .s1{
+    margin-left: -30%;
+}
+#img_5:checked ~ .s1{
+    margin-left: -40%;
+}
+#img_6:checked ~ .s1{
+    margin-left: -50%;
+}
+#img_7:checked ~ .s1{
+    margin-left: -60%;
+}
+#img_8:checked ~ .s1{
+    margin-left: -70%;
+}
+#img_9:checked ~ .s1{
+    margin-left: -80%;
+}
+#img_10:checked ~ .s1{
+    margin-left: -90%;
+}
+
+/*SECTION REQUISITES */
+/* Detalhes do jogo e Requisitos de Hardware/Software */
+#requisites{
+    background-color: #e9e9e9;;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+#requisites h2{
+    color: #3c4043;
+}
+.requiriments_config{
+    margin: 8px 0;
+    display: flex;
+}
+@media screen and (max-width: 700px){
+    .requiriments_config{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.min, .recom{
+    border: 2px solid #3c4043;
+    margin: 4px 12px;
+    padding-left: 28px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.requiriments_config h3{
+    color: #3c4043;
+}
+
+
+/* SECTION PURCHASE */
+@media  screen and (max-width: 620px) {
+    .container_purchase{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-height: max-content; 
+        padding-bottom: 15px; 
+        border: 1px solid pink;
+    }
+
+    .tittle_imagecap span{
+        width: 100%;
+        height: 32px;
+        margin: auto;
+    }
+    .tittle_imagecap img{
+        width: 50%;
+        margin: 15px auto;
+    }
+}
+@media  screen and (min-width: 620px) {
+    .container_purchase{
+        max-width: 900px;
+        margin: 32px auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        max-height: max-content;
+        padding: 0 20px;
+    }
+
+    .tittle_imagecap span{
+        width: 100%;
+        height: 32px;
+        margin: auto;
+    }
+    .tittle_imagecap img{
+        height: 375px;
+        margin: auto;
+    }
+}
+
+
+
+
+.container_purchase span{
+    color:#e9e9e9;
+}
+
+.tittle_imagecap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: max-content;
+}
+
+
+.frase_platform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 50%;
+    
+}
+
+.frase{
+    width: 100%;
+    height: 50%;
+    padding: 0 15px;
+    text-align: center;
+}
+.frase h3{
+    margin-top: 10%;
+}
+
+.platform{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+}
+.platform img{
+    height: 48px;
+    background-color: #9c7b3d;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.platform img:hover{
+    background-color: #2F4F4F;
+    scale: 1.05;
+}
+
+
+/* SECTION CONTACT */
+#contact{
+    background-color: #e9e9e9;
+    border: 1px solid #3c4043;
+}
+#contact .container{
+    text-align: center;
+}
+#contact .container h2{
+    color: #3c4043;
+    margin: 32px 0;
+}
+.contact-method{
+    display: flex;
+   justify-content: center;
+   margin: 32px 0;
+}
+.contact-method form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;   
+}
+.contact-method input, .contact-method textarea, .contact-method button{
+    margin: 4px 0;
+    padding: 8px;
+    font-family: 'Roboto', serif;
+}
+.contact-method input{
+    height: 40px;
+}
+.contact-method textarea{
+    resize: none;
+    width: 100%;
+    height: 150px;
+}
+.contact-method button{
+    background-color: #d99e30;
+    color: #e9e9e9;
+    border: none;
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all .2s ease-in-out;
+}
+.contact-method button:hover{
+    background-color: #2F4F4F;
+    text-decoration: underline;
+}
+
+
+
+
+/* SECTION DISCOVERY */
+/* Container para o nome dos jogos */
+.game_name{
+    max-height: 80px;
+    width: 100%;
+    background-color: #9c7b3d;
+}
+.game_name img{
+    max-height: 80px;
+}
+
+/* Containers absoluto ocultando as partes das imagens que excederem o limite */
+.discovery_box h2{
+    padding: 32px 0;
+    text-align: center;
+}
+.discovery_box{
+    overflow: hidden;
+    max-width: 1280px;
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    left: 50%;
+    translate: -50% 0%;
+}
+.discovery_image{
+    position: absolute;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+  
+}
+.discovery_box img{
+    width: 100%; 
+}
+/* Alinhar imagens para o clip */
+.align_1, .align_2{
+    margin-left: -30%;
+}
+.align_4{
+    margin-left: 20%;
+}
+.align_5{
+    margin-left: 30%;
+}
+/* Efeito de corte diagonal das imagens */
+.clip1{
+    clip-path: polygon(0% 0%, 25% 0%, 0% 100%, 0% 100%);
+}.clip1:hover{
+    clip-path: polygon(0% 0%, 50% 0%, 25% 100%, 0% 100%);
+    filter: grayscale(0%);
+}
+.clip1:hover ~ .clip2, .clip1:hover ~ .clip3, .clip1:hover ~ .clip4, .clip1:hover ~ .clip5{
+    margin-left: +20%;
+}
+.clip1:hover ~ .game_name_1{
+    display: block;
+}
+
+.clip2{
+    clip-path: polygon(25% 0%, 50% 0%, 25% 100%, 0% 100%);
+}.clip2:hover{
+    clip-path: polygon(13% 0%, 63% 0%, 37% 100%, -12% 100%);
+    filter: grayscale(0%);
+}
+.clip2:hover ~ .clip3, .clip2:hover ~ .clip4, .clip2:hover ~ .clip5{
+    margin-left: +12%;
+}
+
+.clip3{
+    clip-path: polygon(50% 0%, 75% 0%, 50% 100%, 25% 100%);
+}.clip3:hover{
+    clip-path: polygon(37% 0%, 88% 0%, 63% 100%, 12% 100%);
+    filter: grayscale(0%);
+}
+.clip3:hover ~ .clip4, .clip3:hover ~ .clip5{
+    margin-left: +12%;
+}
+
+.clip4{
+    clip-path: polygon(75% 0%, 100% 0%, 75% 100%, 50% 100%); 
+}.clip4:hover{
+    clip-path: polygon(63% 0%, 112% 0%, 88% 100%, 37% 100%);
+    filter: grayscale(0%); 
+}
+.clip4:hover ~ .clip5{
+    margin-left: +10%;
+}
+
+.clip5{
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 75% 100%);
+}.clip5:hover{
+    clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 55% 100%);
+    filter: grayscale(0%);
+}
+
+
+
+
+    
+    
+
+/*     font-family: SegoeProBlack, Segoe UI, SegoeUI, Helvetica, Arial, sans-serif; */
